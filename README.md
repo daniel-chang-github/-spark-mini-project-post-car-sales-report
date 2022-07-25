@@ -8,6 +8,7 @@ Step 1. Import the data
   raw_rdd = sc.textFile("data/data.csv") 
 
 Raw Data.
+
     ['1,I,VXIO456XLBB630221,Nissan,Altima,2003,2002-05-08,Initial sales from TechMotors',
      '2,I,INU45KIOOPA343980,Mercedes,C300,2015,2014-01-01,Sold from EuroMotors',
      '3,A,VXIO456XLBB630221,,,,2014-07-02,Head on collision',
