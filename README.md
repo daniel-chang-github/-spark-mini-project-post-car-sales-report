@@ -56,46 +56,46 @@ Step 3. Perform group aggregation to populate make and year to all the records.
   
   Result.
   
-  [('Nissan', '2003', 'I'),
-   ('Nissan', '2003', 'A'),
-   ('Nissan', '2003', 'R'),
-   ('Nissan', '2003', 'R'),
-   ('Mercedes', '2015', 'I'),
-   ('Mercedes', '2015', 'A'),
-   ('Mercedes', '2015', 'I'),
-   ('Mercedes', '2015', 'R'),
-   ('Mercedes', '2015', 'A'),
-   ('Mercedes', '2015', 'R'),
-   ('Mercedes', '2015', 'R'),
-   ('Mercedes', '2016', 'I'),
-   ('Mercedes', '2016', 'R'),
-   ('Mercedes', '2016', 'A'),
-   ('Toyota', '2017', 'I'),
-   ('Toyota', '2017', 'R')]
-   
+    [('Nissan', '2003', 'I'),
+     ('Nissan', '2003', 'A'),
+     ('Nissan', '2003', 'R'),
+     ('Nissan', '2003', 'R'),
+     ('Mercedes', '2015', 'I'),
+     ('Mercedes', '2015', 'A'),
+     ('Mercedes', '2015', 'I'),
+     ('Mercedes', '2015', 'R'),
+     ('Mercedes', '2015', 'A'),
+     ('Mercedes', '2015', 'R'),
+     ('Mercedes', '2015', 'R'),
+     ('Mercedes', '2016', 'I'),
+     ('Mercedes', '2016', 'R'),
+     ('Mercedes', '2016', 'A'),
+     ('Toyota', '2017', 'I'),
+     ('Toyota', '2017', 'R')]
+
 Step 4. Count number of occurrence for accidents for the vehicle make and year.
  
   make_kv = enhance_make.map(lambda list_val: extract_make_key_value(list_val))
   
   Result.
   
-  [('Nissan-2003', 0),
-   ('Nissan-2003', 1),
-   ('Nissan-2003', 0),
-   ('Nissan-2003', 0),
-   ('Mercedes-2015', 0),
-   ('Mercedes-2015', 1),
-   ('Mercedes-2015', 0),
-   ('Mercedes-2015', 0),
-   ('Mercedes-2015', 1),
-   ('Mercedes-2015', 0),
-   ('Mercedes-2015', 0),
-   ('Mercedes-2016', 0),
-   ('Mercedes-2016', 0),
-   ('Mercedes-2016', 1),
-   ('Toyota-2017', 0),
-   ('Toyota-2017', 0)]
-   
+    [('Nissan-2003', 0),
+     ('Nissan-2003', 1),
+     ('Nissan-2003', 0),
+     ('Nissan-2003', 0),
+     ('Mercedes-2015', 0),
+     ('Mercedes-2015', 1),
+     ('Mercedes-2015', 0),
+     ('Mercedes-2015', 0),
+     ('Mercedes-2015', 1),
+     ('Mercedes-2015', 0),
+     ('Mercedes-2015', 0),
+     ('Mercedes-2016', 0),
+     ('Mercedes-2016', 0),
+     ('Mercedes-2016', 1),
+     ('Toyota-2017', 0),
+     ('Toyota-2017', 0)]
+
  Step 5. Aggregate the key and count the number of records in total per key.
  
     [('Nissan-2003', 1),
