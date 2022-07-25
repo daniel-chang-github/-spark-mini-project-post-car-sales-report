@@ -31,6 +31,7 @@ Setp 2. Perform map operation
   vin_kv = raw_rdd.map(lambda x: extract_vin_key_value(x))
   
   Result.
+  
     [('VXIO456XLBB630221', ('Nissan', '2003', 'I')),
      ('INU45KIOOPA343980', ('Mercedes', '2015', 'I')),
      ('VXIO456XLBB630221', ('', '', 'A')),
@@ -54,6 +55,7 @@ Step 3. Perform group aggregation to populate make and year to all the records.
   enhance_make = vin_kv.groupByKey().flatMap(lambda kv: populate_make(kv[1]))
   
   Result.
+  
   [('Nissan', '2003', 'I'),
    ('Nissan', '2003', 'A'),
    ('Nissan', '2003', 'R'),
@@ -76,6 +78,7 @@ Step 4. Count number of occurrence for accidents for the vehicle make and year.
   make_kv = enhance_make.map(lambda list_val: extract_make_key_value(list_val))
   
   Result.
+  
   [('Nissan-2003', 0),
    ('Nissan-2003', 1),
    ('Nissan-2003', 0),
@@ -94,6 +97,7 @@ Step 4. Count number of occurrence for accidents for the vehicle make and year.
    ('Toyota-2017', 0)]
    
  Step 5. Aggregate the key and count the number of records in total per key.
+ 
     [('Nissan-2003', 1),
     ('Mercedes-2015', 2),
     ('Mercedes-2016', 1),
