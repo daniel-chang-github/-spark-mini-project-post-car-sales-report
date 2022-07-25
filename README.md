@@ -98,6 +98,8 @@ Step 4. Count number of occurrence for accidents for the vehicle make and year.
 
  Step 5. Aggregate the key and count the number of records in total per key.
  
+  make_kv.reduceByKey(add).collect()
+ 
     [('Nissan-2003', 1),
     ('Mercedes-2015', 2),
     ('Mercedes-2016', 1),
